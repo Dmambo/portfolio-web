@@ -116,10 +116,6 @@
   flex-direction: column;
 }
 
-.workcard .work-img img {
-  max-width: 100%;
-}
-
 .workcarddetails {
   padding: 10px;
   align-self: center;
@@ -253,6 +249,10 @@
 .framework ul li img {
   width: 40px;
   margin-right: 20px;
+}
+
+.workcard .work-img img {
+  max-width: 100%;
 }
 
 .workcarddetails ul li:first-child {
