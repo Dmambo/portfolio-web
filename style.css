@@ -6,7 +6,7 @@
 }
 
 .headers {
-  min-height: 70px;  
+  min-height: 70px;
 }
 
 .nav-bar {
@@ -69,19 +69,19 @@
   margin-bottom: 15px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px
+  line-height: 24px;
 }
 
 .social-title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
+  padding: 0;
   gap: 16px;
   color: #6070ff;
 }
 
-.social-media ul{
+.social-media ul {
   display: flex;
   list-style: none;
   margin-top: 10px;
@@ -144,14 +144,15 @@
   list-style-position: inside;
 }
 
-.workcarddetails ul li:first-child {
- font-weight: bold;
- color: #344563;
- list-style: none;
-}
-
-.workcarddetails ul li:last-child {
-  margin-right: 0;
+.worksc ul li {
+  list-style: none;
+  padding: 7px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #6070ff;
+  background-color: #d2d2fa;
+  margin-right: 10px;
 }
 
 .workcarddetails p {
@@ -163,17 +164,6 @@
 .worksc ul {
   display: flex;
   margin: 12px 0;
-}
-
-.worksc ul li {
-  list-style: none;
-  padding: 7px;
-  border-radius: 8px;
-  font-size: 14px;
-  line-height: 16px;
-  color: #6070ff;
-  background-color: #d2d2fa;
-  margin-right: 10px;
 }
 
 .btn {
@@ -212,14 +202,14 @@
   margin-bottom: 15px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px   
+  line-height: 24px;
 }
 
 .about h3 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
+  padding: 0;
   gap: 16px;
   color: #6070ff;
 }
@@ -263,6 +253,16 @@
 .framework ul li img {
   width: 40px;
   margin-right: 20px;
+}
+
+.workcarddetails ul li:first-child {
+  font-weight: bold;
+  color: #344563;
+  list-style: none;
+}
+
+.workcarddetails ul li:last-child {
+  margin-right: 0;
 }
 
 /* CONTACT STYLING  */
@@ -323,7 +323,6 @@
   padding: 10px;
   margin: 10px 0;
   border: 1px solid whitesmoke;
-  margin: 10px 0;
   width: 100%;
   margin-top: 20px;
 }
