@@ -93,7 +93,6 @@
 }
 
 /* work card styling  */
-
 .card {
   display: grid;
   row-gap: 25px;
@@ -138,7 +137,6 @@
   display: flex;
   overflow: hidden;
   color: #7a869a;
-
 }
 
 .workcarddetails ul li {
@@ -231,7 +229,7 @@
   flex-direction: column;
   list-style: none;
   border-bottom: 1px solid rgb(241, 229, 229);
-  padding: 10px
+  padding: 10px;
 }
 
 .framework .badge {
@@ -240,10 +238,6 @@
   color: black;
   font-size: 20px;
   font-weight: 500;
-  /* margin: 10px 0; */
-  /* height: 24px;
-  width: 100%; */
-  /* align-items: center; */
 }
 
 .framework .badge .down {
