@@ -22,6 +22,7 @@
         <div class="Logo"><a href="#home">My Logo</a></div>
         <div class="bars">
           <img src="./images/menu-icon.svg" alt="hamburgar" />
+          <ion-icon name="close-outline" class="close-btn bb"></ion-icon>
         </div>
         <ul class="list-items">
           <li>
@@ -34,7 +35,22 @@
             <a href="#contact">Contact</a>
           </li>
         </ul>
+        <div class="desktop">
+            <ul class="list-item">
+                <li>
+                  <a href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                  <a href="#about">About</a>
+                </li>
+                <li >
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+        </div>
+
       </nav>
+  
     </header>
     <!---HERO SECTION-->
     <section class="hero">
@@ -75,10 +91,10 @@
     </section>
 
     <!-- work card section  -->
-    <section class="card">
+    <section class="card" id="portfolio">
         <div class="workcard">
             <div class="work-img">
-                <img src="./images/snapshoot-portfolio1.png" alt="" />
+                <img src="./images/snapshoot-portfolio1.png" alt="avocado" />
             </div>
             <div class="workcarddetails">
                 <h2>Tonic</h2>
@@ -87,19 +103,21 @@
                   <li>Back End Dev</li>
                   <li>2015</li>
                 </ul>
+                <p>
+                    A daily selection of privately personalized reads; no accounts or
+                    sign-ups required.
+                </p>
+                <div class="worksc">
+                    <ul>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>Javascript</li>
+                    </ul>
+                    <button type="button" class="btn">See Project</button>
+                </div>
             </div>
-            <p>
-                A daily selection of privately personalized reads; no accounts or
-                sign-ups required.
-            </p>
-            <div class="worksc">
-                <ul>
-                    <li>Html</li>
-                    <li>Css</li>
-                    <li>Javascript</li>
-                </ul>
-                <button type="button" class="btn">See Project</button>
-            </div>
+            
+
         </div>
         <div class="workcard">
             <div class="work-img">
@@ -112,19 +130,20 @@
                   <li>Back End Dev</li>
                   <li>2015</li>
                 </ul>
+                <p>
+                    A daily selection of privately personalized reads; no accounts or
+                    sign-ups required.
+                </p>
+                <div class="worksc">
+                    <ul>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>Javascript</li>
+                    </ul>
+                    <button type="button" class="btn">See Project</button>
+                </div>
             </div>
-            <p>
-                A daily selection of privately personalized reads; no accounts or
-                sign-ups required.
-            </p>
-            <div class="worksc">
-                <ul>
-                    <li>Html</li>
-                    <li>Css</li>
-                    <li>Javascript</li>
-                </ul>
-                <button type="button" class="btn">See Project</button>
-            </div>
+          
         </div>
         <div class="workcard">
             <div class="work-img">
@@ -137,19 +156,20 @@
                   <li>Back End Dev</li>
                   <li>2015</li>
                 </ul>
+                <p>
+                    A daily selection of privately personalized reads; no accounts or
+                    sign-ups required.
+                </p>
+                <div class="worksc">
+                    <ul>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>Javascript</li>
+                    </ul>
+                    <button type="button" class="btn">See Project</button>
+                </div>
             </div>
-            <p>
-                A daily selection of privately personalized reads; no accounts or
-                sign-ups required.
-            </p>
-            <div class="worksc">
-                <ul>
-                    <li>Html</li>
-                    <li>Css</li>
-                    <li>Javascript</li>
-                </ul>
-                <button type="button" class="btn">See Project</button>
-            </div>
+            
         </div>
         <div class="workcard">
             <div class="work-img">
@@ -162,25 +182,26 @@
                   <li>Back End Dev</li>
                   <li>2015</li>
                 </ul>
+                <p>
+                    A daily selection of privately personalized reads; no accounts or
+                    sign-ups required.
+                </p>
+                <div class="worksc">
+                    <ul>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>Javascript</li>
+                    </ul>
+                    <button type="button" class="btn">See Project</button>
+                </div>
             </div>
-            <p>
-                A daily selection of privately personalized reads; no accounts or
-                sign-ups required.
-            </p>
-            <div class="worksc">
-                <ul>
-                    <li>Html</li>
-                    <li>Css</li>
-                    <li>Javascript</li>
-                </ul>
-                <button type="button" class="btn">See Project</button>
-            </div>
+            
            </div>
         </div>
     </section>
 
     <!-- ABOUT SECTION  -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="about-me">
             <h2>About Myself</h2>
             <p>
@@ -244,7 +265,7 @@
         </div>
     </section>
 <!-- CONTACT FORM  -->
-    <section class="contact-form">
+    <section class="contact-form" id="contact">
         <div class="contact">
             <h2>Contact me</h2>
             <p>
@@ -252,12 +273,12 @@
             feature that you need built or a project that needs coding. I’d love
             to help with it
             </p>
-            <form action="https://formspree.io/f/mnqroaaw" method="post" class="forms">
+            <form action="https://formspree.io/f/xwkzweoq" method="post" class="forms">
                 <fieldset class="form-inputs">
                     <input type="text" placeholder="Your Name" maxlength="30" required />
-                <input type="email" placeholder="example@mail.com" required>
-                <textarea name="message" placeholder="write your message here" maxlength="500" required></textarea>
-                <button type="submit" class="submit-btn">Get In Touch</button>
+                    <input type="email" placeholder="example@mail.com" required>
+                    <textarea name="message" placeholder="write your message here" maxlength="500" required></textarea>
+                    <button type="submit" class="submit-btn">Get In Touch</button>
                 </fieldset>
             </form>
             <div class="slide">
@@ -265,6 +286,9 @@
             </div>
         </div>
     </section>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
  </body>
 </html>
     
