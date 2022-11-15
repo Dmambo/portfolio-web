@@ -4,9 +4,14 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 
 .headers {
   min-height: 70px;
+  position: relative;
 }
 
 .nav-bar {
@@ -14,6 +19,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 27px 20px;
+  
 }
 
 .Logo {
@@ -30,20 +36,73 @@
 .bars {
   width: 24px;
   padding: 3px 5px;
+  cursor: pointer;
+}
+
+.bars .close-btn {
+  display: none;
+  width: 27px;
+  height: 25px;
+  z-index: 999;
+  position: absolute;
+  color: white;
 }
 
 .list-items {
-  display: none;
+  visibility: hidden;
+  pointer-events: none;
+  width: 100%;
+  height: 100vh;
   list-style: none;
+  background: #6070ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.99;
+  backdrop-filter: blur(15px);
+  mix-blend-mode: multiply;
+  transform: translateX(100%);
+  transition: all 0.5s linear;
+}
+
+.desktop {
+  display: none;
+}
+
+.list-items li {
+ margin-top: 55px;
+ gap: 40px;
+ margin-right: 38px;
 }
 
 .list-items li a {
-  font-size: 15px;
   font-weight: 500;
-  color: #344563;
+  color: white;
   line-height: 20px;
   padding: 10px 12px;
   text-decoration: none;
+  height: 24px;
+  left: 0px;
+  right: 68px;
+  top: calc(50% - 24px/2);
+  font-size: 32px;
+  line-height: 44px;
+  margin-top: 80px;
+}
+
+.active .list-items {
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.active .nav-bar .bars img {
+  display: none;
+}
+
+.active .nav-bar .bars .close-btn {
+  display: block;
 }
 
 .hero {
@@ -116,6 +175,10 @@
   flex-direction: column;
 }
 
+.workcard .work-img img{
+  max-width: 100%;
+}
+
 .workcarddetails {
   padding: 10px;
   align-self: center;
@@ -140,8 +203,23 @@
   list-style-position: inside;
 }
 
-.worksc ul li {
+.workcarddetails ul li:first-child {
   list-style: none;
+  font-weight: 600;
+  color: #344563;
+}
+
+.workcarddetails ul li:last-child {
+  margin-right: 0;
+}
+
+.workcarddetails .worksc ul{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.workcarddetails .worksc ul li { 
   padding: 7px;
   border-radius: 8px;
   font-size: 14px;
@@ -149,6 +227,7 @@
   color: #6070ff;
   background-color: #d2d2fa;
   margin-right: 10px;
+  list-style: none;
 }
 
 .workcarddetails p {
@@ -251,10 +330,6 @@
   margin-right: 20px;
 }
 
-.workcard .work-img img {
-  max-width: 100%;
-}
-
 .workcarddetails ul li:first-child {
   font-weight: bold;
   color: #344563;
@@ -341,4 +416,168 @@
 .slide {
   bottom: 8px;
   margin-left: 95px;
+}
+
+/* DESKTOP VIEW  */
+@media screen and (min-width: 768px){
+  .headers{
+    padding-left: 52px;
+    padding-right: 52px;
+    position: relative;
+  }
+
+  .bars {
+    display: none;
+  }
+
+  .list-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #344563;
+    /* margin-top: 0; */
+    background: none;
+    position: absolute;
+  }
+
+  .desktop {
+    display: flex;
+  }
+
+  .desktop .list-item {
+    list-style: none;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #344563;
+  }
+  .desktop .list-item li a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #344563;
+    line-height: 20px;
+    padding: 10px 12px;
+    text-decoration: none;
+  }
+
+  .list-items li a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #344563;
+    line-height: 20px;
+    padding: 10px 12px;
+    text-decoration: none;
+  }
+
+  .hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/Header\ bg@2x.png");
+    background-repeat: no-repeat;
+    min-height: 914px;
+  }
+
+  .container {
+    justify-self: center;
+    align-self: center;
+    max-width: 920px;
+  }
+
+  .container h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 52px;
+  }
+
+  .container p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+    line-height: 28px;
+  }
+
+  .card {
+    margin: 26px 200px;
+  }
+
+  .workcard {
+    display: flex;
+    padding: 120px 30px;
+    gap: 25px;
+  }
+  
+  .workcard .work-img img {
+    padding: 0;
+
+  }
+
+  .workcard:nth-child(even) .work-img {
+    order: 2;
+  }
+
+  .workcarddetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .about {
+    margin: 0 206px;
+  }
+
+  .about-me h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    line-height: 52px;
+  }
+
+  .about-me p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .contact-form {
+    display: flex;
+    background-image: url("./images/contact-form-bg-pc.png");
+    background-size: cover;
+    justify-content: center;
+    background-position: initial;
+  }
+
+  .contact-form .contact{
+    display: flex;
+    flex-direction: column;
+    margin-left: 160px;
+    justify-self: center;
+    align-items: center;
+  }
+
+  .contact-form .contact p {
+    font-size: 20px;
+    font-weight: 400;
+    width: 570px;
+    line-height: 28px;
+  }
+
+  .forms .form-inputs input {
+    width: 447px;
+    height: 48px;
+    border-radius: 0;
+  }
+
+  .form-inputs .submit-btn {
+    margin: 0 33%;
+  }
+
+  .slide {
+    visibility: collapse;
+  }
 }
