@@ -173,10 +173,6 @@ body {
   flex-direction: column;
 }
 
-.workcard .work-img img {
-  max-width: 100%;
-}
-
 .active .nav-bar .bars img {
   display: none;
 }
@@ -198,6 +194,25 @@ body {
   display: flex;
   overflow: hidden;
   color: #7a869a;
+}
+
+.framework ul li {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f7f7f9;
+}
+
+.framework ul li img {
+  width: 40px;
+  margin-right: 20px;
+}
+
+.workcard .work-img img {
+  max-width: 100%;
 }
 
 .workcarddetails ul li {
@@ -317,21 +332,6 @@ body {
   height: 14px;
 }
 
-.framework ul li {
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-  margin: 10px;
-  border-radius: 8px;
-  padding: 10px;
-  background-color: #f7f7f9;
-}
-
-.framework ul li img {
-  width: 40px;
-  margin-right: 20px;
-}
-
 /* CONTACT STYLING  */
 .contact-form {
   border-top-left-radius: 70px;
@@ -411,8 +411,8 @@ body {
 }
 
 /* DESKTOP VIEW  */
-@media screen and (min-width: 768px){
-  .headers{
+@media screen and (min-width: 768px) {
+  .headers {
     padding-left: 52px;
     padding-right: 52px;
     position: relative;
@@ -443,15 +443,6 @@ body {
     color: #344563;
   }
 
-  .desktop .list-item li a {
-    font-size: 15px;
-    font-weight: 500;
-    color: #344563;
-    line-height: 20px;
-    padding: 10px 12px;
-    text-decoration: none;
-  }
-
   .list-items li a {
     font-size: 15px;
     font-weight: 500;
@@ -461,7 +452,16 @@ body {
     text-decoration: none;
   }
 
-  .hero{
+  .desktop .list-item li a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #344563;
+    line-height: 20px;
+    padding: 10px 12px;
+    text-decoration: none;
+  }
+
+  .hero {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -499,10 +499,9 @@ body {
     padding: 120px 30px;
     gap: 25px;
   }
-  
+
   .workcard .work-img img {
     padding: 0;
-
   }
 
   .workcard:nth-child(even) .work-img {
