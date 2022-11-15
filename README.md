@@ -1,7 +1,5 @@
-# Portfolio-setup-and-mobile-first
 # Portfolio-setup-and-mobile-first![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
 
 > Portfolio-setup-and-mobile-first.
 
