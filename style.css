@@ -4,7 +4,11 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-html,
+
+html {
+  overflow-x: hidden;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -19,7 +23,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 27px 20px;
-  
 }
 
 .Logo {
@@ -70,21 +73,20 @@ body {
 }
 
 .list-items li {
- margin-top: 55px;
- gap: 40px;
- margin-right: 38px;
+  margin-top: 55px;
+  gap: 40px;
+  margin-right: 38px;
 }
 
 .list-items li a {
   font-weight: 500;
   color: white;
-  line-height: 20px;
   padding: 10px 12px;
   text-decoration: none;
   height: 24px;
-  left: 0px;
+  left: 0;
   right: 68px;
-  top: calc(50% - 24px/2);
+  top: calc(50% - 24px / 2);
   font-size: 32px;
   line-height: 44px;
   margin-top: 80px;
@@ -95,10 +97,6 @@ body {
   pointer-events: auto;
   transform: translateX(0%);
   opacity: 1;
-}
-
-.active .nav-bar .bars img {
-  display: none;
 }
 
 .active .nav-bar .bars .close-btn {
@@ -175,8 +173,12 @@ body {
   flex-direction: column;
 }
 
-.workcard .work-img img{
+.workcard .work-img img {
   max-width: 100%;
+}
+
+.active .nav-bar .bars img {
+  display: none;
 }
 
 .workcarddetails {
@@ -213,13 +215,18 @@ body {
   margin-right: 0;
 }
 
-.workcarddetails .worksc ul{
+.worksc ul {
+  display: flex;
+  margin: 12px 0;
+}
+
+.workcarddetails .worksc ul {
   display: flex;
   flex-wrap: wrap;
   margin: 10px 0;
 }
 
-.workcarddetails .worksc ul li { 
+.workcarddetails .worksc ul li {
   padding: 7px;
   border-radius: 8px;
   font-size: 14px;
@@ -234,11 +241,6 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px 0;
-}
-
-.worksc ul {
-  display: flex;
-  margin: 12px 0;
 }
 
 .btn {
@@ -328,16 +330,6 @@ body {
 .framework ul li img {
   width: 40px;
   margin-right: 20px;
-}
-
-.workcarddetails ul li:first-child {
-  font-weight: bold;
-  color: #344563;
-  list-style: none;
-}
-
-.workcarddetails ul li:last-child {
-  margin-right: 0;
 }
 
 /* CONTACT STYLING  */
@@ -435,7 +427,6 @@ body {
     justify-content: center;
     align-items: center;
     color: #344563;
-    /* margin-top: 0; */
     background: none;
     position: absolute;
   }
@@ -447,11 +438,11 @@ body {
   .desktop .list-item {
     list-style: none;
     display: flex;
-    display: flex;
     justify-content: center;
     align-items: center;
     color: #344563;
   }
+
   .desktop .list-item li a {
     font-size: 15px;
     font-weight: 500;
@@ -552,7 +543,7 @@ body {
     background-position: initial;
   }
 
-  .contact-form .contact{
+  .contact-form .contact {
     display: flex;
     flex-direction: column;
     margin-left: 160px;
