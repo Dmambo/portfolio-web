@@ -166,6 +166,7 @@ body {
   padding: 20px 15px;
   border-radius: 12px;
 }
+
 .work-img {
   display: flex;
   flex-direction: column;
@@ -175,10 +176,6 @@ body {
   display: flex;
   align-self: center;
   flex-direction: column;
-}
-
-.workcard .work-img img {
-  max-width: 100%;
 }
 
 .workcarddetails {
@@ -214,6 +211,13 @@ body {
   margin-right: 20px;
 }
 
+.work-img img {
+  max-width: 100%;
+}
+
+.workcard .work-img img {
+  max-width: 100%;
+}
 
 .active .nav-bar .bars img {
   display: none;
@@ -449,10 +453,6 @@ body {
   margin: 20px 20px;
   gap: 9px;
   top: 25px;
-}
-
-.work-img img {
-  max-width: 100%;
 }
 
 .modal-block {
