@@ -167,6 +167,12 @@ body {
   border-radius: 12px;
 }
 
+.work-img {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
 .workcard .work-img {
   display: flex;
   align-self: center;
@@ -178,7 +184,7 @@ body {
   align-self: center;
 }
 
-.workcarddetails h2 {
+.workcarddetailsh2 {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 32px;
@@ -186,9 +192,8 @@ body {
   line-height: 44px;
 }
 
-.workcarddetails ul {
+.workcarddetailsul {
   display: flex;
-  overflow: hidden;
   color: #7a869a;
 }
 
@@ -200,6 +205,11 @@ body {
   border-radius: 8px;
   padding: 10px;
   background-color: #f7f7f9;
+}
+
+.work-img img {
+  max-width: 100%;
+  max-height: 90%;
 }
 
 .framework ul li img {
@@ -215,33 +225,33 @@ body {
   display: none;
 }
 
-.workcarddetails ul li {
+.workcarddetailsli {
   margin-right: 15px;
   list-style-position: inside;
 }
 
-.workcarddetails ul li:first-child {
+.workcarddetailsli:first-child {
   list-style: none;
   font-weight: 600;
   color: #344563;
 }
 
-.workcarddetails ul li:last-child {
+.workcarddetailsli:last-child {
   margin-right: 0;
 }
 
-.worksc ul {
+.workscul {
   display: flex;
   margin: 12px 0;
 }
 
-.workcarddetails .worksc ul {
+.workcarddetails .workscul {
   display: flex;
   flex-wrap: wrap;
   margin: 10px 0;
 }
 
-.workcarddetails .worksc ul li {
+.workscli {
   padding: 7px;
   border-radius: 8px;
   font-size: 14px;
@@ -252,13 +262,14 @@ body {
   list-style: none;
 }
 
-.workcarddetails p {
+.workcarddetailsp {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px 0;
 }
 
-.btn {
+.btn,
+.works {
   margin-top: 20px;
   font-size: 18px;
   border: 1px solid #396df2;
@@ -268,7 +279,12 @@ body {
   border-radius: 8px;
 }
 
-.btn:hover {
+.works {
+  width: 120px;
+}
+
+.btn,
+.works:hover {
   background-color: #396df2;
   color: #092772;
 }
@@ -410,6 +426,95 @@ body {
   margin-left: 95px;
 }
 
+.popup-container {
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  opacity: 0.99;
+  background: rgba(16, 32, 66, 0.4);
+  backdrop-filter: blur(15px);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.work-modal {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 100%;
+  height: 95vh;
+  padding: 25px;
+  position: relative;
+  border-radius: 18px;
+  overflow-y: scroll;
+  max-width: 1150px;
+  margin: 20px 20px;
+  gap: 9px;
+  top: 25px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+.modal-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.rightcontain {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+.rightcontain .workscul {
+  border-bottom: 1px solid gray;
+  padding-bottom: 18px;
+}
+
+.leftcontain {
+  width: 100%;
+  margin-top: 2px;
+}
+
+#close-btn {
+  margin-top: 5px;
+  align-self: flex-end;
+  cursor: pointer;
+  position: absolute;
+}
+
+.access {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.linkbtn {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #6070ff;
+  padding: 8px 7px;
+  border-radius: 8px;
+  align-items: center;
+  text-decoration: none;
+  color: #396df2;
+}
+
+.icon-btn {
+  margin-left: 7px;
+}
+
 /* DESKTOP VIEW  */
 @media screen and (min-width: 768px) {
   .headers {
@@ -500,6 +605,13 @@ body {
     gap: 25px;
   }
 
+  .work-img img {
+    max-width: 100%;
+    max-height: 85%;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+
   .workcard .work-img img {
     padding: 0;
   }
@@ -569,5 +681,26 @@ body {
 
   .slide {
     visibility: collapse;
+  }
+
+  .work-modal {
+    margin-top: 100px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 150px;
+  }
+
+  .modal-block {
+    flex-direction: row;
+  }
+
+  .leftcontain {
+    width: 65%;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .rightcontain {
+    width: 35%;
   }
 }
