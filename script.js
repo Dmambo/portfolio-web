@@ -10,15 +10,15 @@ list.addEventListener('click', () => {
   headers.classList.toggle('active');
 });
 
-//creating a div element
+// creating a div element
 function iDiv(f = 'div') {
-  if(!f) {
-    f = 'div'
+  if (!f) {
+    f = 'div';
   }
-  return document.createElement(f)
+  return document.createElement(f);
 }
 
-// project data declaration 
+// project data declaration
 
 const myProjectData = [
   {
@@ -28,7 +28,7 @@ const myProjectData = [
     text: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     tags: ['HTML', 'CSS', 'Javascript'],
     img: './images/snapshoot-portfolio1.png',
-    Details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    Details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     liveLink: 'https://dmambo.github.io/',
     sourceLink: '#',
   },
@@ -40,7 +40,7 @@ const myProjectData = [
     text: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     tags: ['HTML', 'CSS', 'Javascript'],
     img: './images/snapshoot-portfolio2.png',
-    Details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    Details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     liveLink: 'https://dmambo.github.io/',
     sourceLink: '#',
   },
@@ -52,11 +52,11 @@ const myProjectData = [
     text: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     tags: ['HTML', 'CSS', 'Javascript'],
     img: './images/snapshoot-portfolio3.png',
-    Details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    Details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     liveLink: 'https://dmambo.github.io/',
     sourceLink: '#',
   },
-  
+
   {
     id: 'port4',
     title: 'Multi-Post Stories',
@@ -64,39 +64,38 @@ const myProjectData = [
     text: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     tags: ['HTML', 'CSS', 'Javascript'],
     img: './images/snapshoot-portfolio4.png',
-    Details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    Details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     liveLink: 'https://dmambo.github.io/',
     sourceLink: '#',
-  }
+  },
 ];
 
-// collect data from the project 
-
+// collect data from the project
 
 function collectData(id) {
   const len = myProjectData.length;
   let project;
 
-  for(let i = 0; i < len; i++) {
-    if(myProjectData[i].id === id) {
-      project = myProjectData[i]
+  for (let i = 0; i < len; i += 1) {
+    if (myProjectData[i].id === id) {
+      project = myProjectData[i];
     }
   }
 
-  if(project) {
+  if (project) {
     const container = iDiv('container');
-    container.classList.add('popup-container')
+    container.classList.add('popup-container');
     container.setAttribute('id', project.id);
 
     const workModal = iDiv();
-    workModal.classList.add('work-modal')
+    workModal.classList.add('work-modal');
 
-    const workcarddetailsh2 = iDiv('h2')
-    workcarddetailsh2.classList.add('workcarddetailsh2')
+    const workcarddetailsh2 = iDiv('h2');
+    workcarddetailsh2.classList.add('workcarddetailsh2');
     workcarddetailsh2.innerText = project.title;
 
-    const closebtn = iDiv('')
-    closebtn.setAttribute('id', "close-btn")
+    const closebtn = iDiv('');
+    closebtn.setAttribute('id', 'close-btn');
     closebtn.innerHTML = '<ion-icon name="close-outline" ></ion-icon>';
 
     const workcarddetailsul = iDiv('ul');
@@ -132,54 +131,53 @@ function collectData(id) {
 
     project.tags.forEach((tag) => {
       const workscli = iDiv('li');
-      workscli.classList.add('workscli')
+      workscli.classList.add('workscli');
       workscli.innerText = tag;
       workscul.appendChild(workscli);
     });
-    //button for live and source
+    // button for live and source
 
     const access = iDiv();
     access.classList.add('access');
 
     const liveLink = iDiv('a');
-      liveLink.classList.add('linkbtn');
-      liveLink.setAttribute('href', project.liveLink);
-      liveLink.innerHTML = 'See Live <span class="icon-btn"><img src="./images/icon.png" alt= "seelive"/></span';
+    liveLink.classList.add('linkbtn');
+    liveLink.setAttribute('href', project.liveLink);
+    liveLink.innerHTML = 'See Live <span class="icon-btn"><img src="./images/icon.png" alt= "seelive"/></span';
 
     const sourceLink = iDiv('a');
-      sourceLink.classList.add('linkbtn');
-      sourceLink.setAttribute('href', project.sourceLink);
-      sourceLink.innerHTML = 'See Source <span class="icon-btn"><img src="./images/vector.png" alt= "seesource"/></span';
+    sourceLink.classList.add('linkbtn');
+    sourceLink.setAttribute('href', project.sourceLink);
+    sourceLink.innerHTML = 'See Source <span class="icon-btn"><img src="./images/vector.png" alt= "seesource"/></span';
 
-      //appending all elemenet
-      access.append(liveLink, sourceLink);
+    // appending all elemenet
+    access.append(liveLink, sourceLink);
 
-      rightcontain.append(workscul, access)
+    rightcontain.append(workscul, access);
 
-      contain.append(leftcontain, rightcontain);
+    contain.append(leftcontain, rightcontain);
 
-      workModal.append(closebtn, workcarddetailsh2, workcarddetailsul, image, contain);
+    workModal.append(closebtn, workcarddetailsh2, workcarddetailsul, image, contain);
 
-      container.append(workModal);
+    container.append(workModal);
 
-      document.querySelector('.hero').append(container);
+    document.querySelector('.hero').append(container);
 
-      const close = document.getElementById('close-btn');
-      close.addEventListener('click', () => {
-        document.querySelector('.hero').removeChild(container);
-      });
+    const close = document.getElementById('close-btn');
+    close.addEventListener('click', () => {
+      document.querySelector('.hero').removeChild(container);
+    });
   }
 }
 
-
-// ADDING WORK TO PORTFOLIO DYNAMICALLY 
+// ADDING WORK TO PORTFOLIO DYNAMICALLY
 
 function dynamicProject() {
   const portfolio = document.getElementById('portfolio');
   myProjectData.forEach((project) => {
     const card = iDiv();
     card.classList.add('workcard');
-//create image tag
+// create image tag
     const workImg = iDiv();
     workImg.classList.add('work-img');
     workImg.innerHTML = `<img class='project-img' src='${project.img}' alt='${project.title}'/>`;
@@ -187,16 +185,16 @@ function dynamicProject() {
 
     const workcarddetails = iDiv();
     workcarddetails.classList.add('workcarddetails');
-//create h2 tag
+// create h2 tag
     const workcarddetailsh2 = iDiv('h2');
-    workcarddetailsh2.classList.add('workcarddetailsh2')
+    workcarddetailsh2.classList.add('workcarddetailsh2');
     workcarddetailsh2.innerText = project.title;
     workcarddetails.appendChild(workcarddetailsh2);
 
     const workcarddetailsul = iDiv('ul');
     workcarddetailsul.classList.add('workcarddetailsul');
-    
-    //loop into the framework tag array
+  
+    // loop into the framework tag array
     project.framework.forEach((x) => {
       const workcarddetailsli = iDiv('li');
       workcarddetailsli.classList.add('workcarddetailsli');
@@ -204,7 +202,7 @@ function dynamicProject() {
       workcarddetailsul.appendChild(workcarddetailsli);
     });
     workcarddetails.appendChild(workcarddetailsul);
-    //create a paragraph tag
+    // create a paragraph tag
     const workcarddetailsp = iDiv('p');
     workcarddetailsp.classList.add('workcarddetailsp');
     workcarddetailsp.innerText = project.text;
@@ -212,10 +210,10 @@ function dynamicProject() {
 
     const workscul = iDiv('ul');
     workscul.classList.add('workscul');
-    //loop into the tag array and assign the elent to an li tag
+    // loop into the tag array and assign the elent to an li tag
     project.tags.forEach((tag) => {
       const workscli = iDiv('li');
-      workscli.classList.add('workscli')
+      workscli.classList.add('workscli');
       workscli.innerText = tag;
       workscul.appendChild(workscli);
     });
@@ -240,4 +238,3 @@ function dynamicProject() {
 window.onload = () => {
   dynamicProject();
 };
-
