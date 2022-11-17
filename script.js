@@ -177,7 +177,7 @@ function dynamicProject() {
   myProjectData.forEach((project) => {
     const card = iDiv();
     card.classList.add('workcard');
-// create image tag
+    // create image tag
     const workImg = iDiv();
     workImg.classList.add('work-img');
     workImg.innerHTML = `<img class='project-img' src='${project.img}' alt='${project.title}'/>`;
@@ -185,7 +185,7 @@ function dynamicProject() {
 
     const workcarddetails = iDiv();
     workcarddetails.classList.add('workcarddetails');
-// create h2 tag
+    // create h2 tag
     const workcarddetailsh2 = iDiv('h2');
     workcarddetailsh2.classList.add('workcarddetailsh2');
     workcarddetailsh2.innerText = project.title;
@@ -193,7 +193,7 @@ function dynamicProject() {
 
     const workcarddetailsul = iDiv('ul');
     workcarddetailsul.classList.add('workcarddetailsul');
-  
+
     // loop into the framework tag array
     project.framework.forEach((x) => {
       const workcarddetailsli = iDiv('li');
