@@ -206,13 +206,13 @@ body {
   background-color: #f7f7f9;
 }
 
+.work-img img {
+  max-width: 100%;
+}
+
 .framework ul li img {
   width: 40px;
   margin-right: 20px;
-}
-
-.work-img img {
-  max-width: 100%;
 }
 
 .workcard .work-img img {
