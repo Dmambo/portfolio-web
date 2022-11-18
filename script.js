@@ -238,3 +238,14 @@ function dynamicProject() {
 window.onload = () => {
   dynamicProject();
 };
+
+const save = document.querySelector('.form-button');
+save.addEventListener('click', ()=> {
+   n1= document.getElementById('name1').value;
+   e1= document.getElementById('email').value;
+   m1= document.getElementById('text-area').value;
+  window.localStorage.setItem("name", n1);
+  window.localStorage.setItem("email", e1);
+  window.localStorage.setItem("message", m1);
+ 
+});
