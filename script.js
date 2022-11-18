@@ -239,7 +239,10 @@ window.onload = () => {
   dynamicProject();
 };
 
+<<<<<<< HEAD
 // form validation 
+=======
+>>>>>>> 398c114549a40fbb2134ec5a7450ea18158374e1
 const Email  = document.getElementById('email');
 const form = document.getElementById('form');
 
@@ -270,12 +273,20 @@ const successMessage = element => {
 
 const validation = () => {
   const email = Email.value.trim();
+<<<<<<< HEAD
 //  check if email is lowercase
+=======
+
+>>>>>>> 398c114549a40fbb2134ec5a7450ea18158374e1
   if (email !== email.toLowerCase()){
     errMessage(Email, 'Email should be in lower case')
   }
   else {
+<<<<<<< HEAD
     successMessage(Email);
     form.submit();
+=======
+    successMessage(Email)
+>>>>>>> 398c114549a40fbb2134ec5a7450ea18158374e1
   } 
 };
