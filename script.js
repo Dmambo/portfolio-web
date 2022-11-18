@@ -252,7 +252,7 @@ function storeData() {
   localStorage.setItem('formData', JSON.stringify(formData));''
 }
 
-function retrieveData() {
+function retrievedData() {
   if (!localStorage.getItem('formData')) {
     storeData();
   }
@@ -263,7 +263,7 @@ function retrieveData() {
   Message.setAttribute('value', local.Message);
 }
 
-retrieveData();
+retrievedData();
 Name.addEventListener('change', storeData);
 Mail.addEventListener('change', storeData);
 Message.addEventListener('change', storeData);
