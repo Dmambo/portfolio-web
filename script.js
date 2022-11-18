@@ -238,7 +238,6 @@ function dynamicProject() {
 window.onload = () => {
   dynamicProject();
 };
-
 // form validation
 const Email = document.getElementById('email');
 const form = document.getElementById('form');
