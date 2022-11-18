@@ -275,7 +275,7 @@ const validation = () => {
   }
 };
 
-function onsubmit(e){
+function onsubmit(e) {
   e.preventDefault();
 
   validation();
