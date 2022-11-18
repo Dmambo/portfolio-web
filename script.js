@@ -276,7 +276,7 @@ const validation = () => {
   }
 };
 
-form.addEventListener('submit', e  => {
+form.addEventListener = (('submit'), e => {
   e.preventDefault();
 
   validation();
