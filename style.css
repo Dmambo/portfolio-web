@@ -421,6 +421,11 @@ body {
   color: #6070ff;
 }
 
+.warn {
+  color: rgba(255, 0, 25, 0.899);
+  font-size: 16px;
+}
+
 .slide {
   bottom: 8px;
   margin-left: 95px;
@@ -657,7 +662,7 @@ body {
   .contact-form .contact {
     display: flex;
     flex-direction: column;
-    margin-left: 160px;
+    margin-left: 120px;
     justify-self: center;
     align-items: center;
   }
@@ -677,6 +682,11 @@ body {
 
   .form-inputs .submit-btn {
     margin: 0 33%;
+  }
+
+  .submit-btn:hover {
+    background: #092772;
+    color: white;
   }
 
   .slide {

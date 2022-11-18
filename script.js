@@ -238,3 +238,44 @@ function dynamicProject() {
 window.onload = () => {
   dynamicProject();
 };
+// form validation
+const Email = document.getElementById('email');
+const form = document.getElementById('form');
+
+// send error message
+const errMessage = (element, message) => {
+  const formInput = element.parentElement;
+  const errdisplay = formInput.querySelector('.warn');
+
+  errdisplay.innerText = message;
+  formInput.classList.add('warn');
+  formInput.classList.remove('success');
+};
+
+//  Remove the error message
+const successMessage = ((element) => {
+  const formInput = element.parentElement;
+  const errdisplay = formInput.querySelector('.warn');
+
+  errdisplay.innerText = '';
+  formInput.classList.add('success');
+  formInput.classList.remove('warn');
+});
+
+const validation = () => {
+  const email = Email.value.trim();
+  // check if email is lowercase
+  if (email !== email.toLowerCase()) {
+    errMessage(Email, 'Email should be in lower case');
+  } else {
+    successMessage(Email);
+    form.submit();
+  }
+};
+
+function onsubmit(e) {
+  e.preventDefault();
+
+  validation();
+}
+form.addEventListener('submit', onsubmit);
