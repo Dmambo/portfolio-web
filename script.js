@@ -255,25 +255,25 @@ const errMessage = (element, message) => {
 
   errdisplay.innerText = message;
   formInput.classList.add('warn');
-  formInput.classList.remove('success')
-}
+  formInput.classList.remove('success');
+};
 
 //  Remove the error message
-const successMessage = element => {
+const successMessage = (element => {
   const formInput = element.parentElement;
   const errdisplay = formInput.querySelector('.warn');
 
   errdisplay.innerText = '';
   formInput.classList.add('success');
-  formInput.classList.remove('warn')
-}
+  formInput.classList.remove('warn');
+});
 
 const validation = () => {
   const email = Email.value.trim();
   // check if email is lowercase
   if (email !== email.toLowerCase()) {
     errMessage(Email, 'Email should be in lower case');
-   }
+  }
   else {
     successMessage(Email);
     form.submit();
