@@ -279,3 +279,36 @@ function onsubmit(e) {
   validation();
 }
 form.addEventListener('submit', onsubmit);
+
+// collect data
+const Name = document.getElementById('name');
+const Mail = document.getElementById('email');
+const Message = document.getElementById('message');
+
+// store the data
+function storeData() {
+  const formData = {
+    Name: Name.value,
+    Mail: Mail.value,
+    Message: Message.value,
+  };
+  localStorage.setItem('formData', JSON.stringify(formData));
+}
+
+// retrieve the data
+function retrieveData() {
+  if (!localStorage.getItem('formData')) {
+    storeData();
+  }
+
+  const local = JSON.parse(localStorage.getItem('formData'));
+  Name.setAttribute('value', local.Name);
+  Mail.setAttribute('value', local.Mail);
+  Message.setAttribute('value', local.Message);
+}
+
+// change the data
+retrieveData();
+Name.addEventListener('change', storeData);
+Mail.addEventListener('change', storeData);
+Message.addEventListener('change', storeData);
