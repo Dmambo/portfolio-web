@@ -265,7 +265,6 @@ const successMessage = ((element) => {
 const validation = () => {
   const email = Email.value.trim();
   // check if email is lowercase
-
   if (email !== email.toLowerCase()) {
     errMessage(Email, 'Email should be in lower case');
   }
@@ -276,8 +275,9 @@ const validation = () => {
   }
 };
 
-form.addEventListener = (('submit'), e => {
+function onsubmit(e){
   e.preventDefault();
 
   validation();
-});
+}
+form.addEventListener('submit', onsubmit);
