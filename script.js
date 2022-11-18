@@ -267,9 +267,7 @@ const validation = () => {
   // check if email is lowercase
   if (email !== email.toLowerCase()) {
     errMessage(Email, 'Email should be in lower case');
-  }
-
-  else {
+  } else {
     successMessage(Email);
     form.submit();
   }
