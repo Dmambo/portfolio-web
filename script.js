@@ -290,9 +290,9 @@ function storeData() {
   const formData = {
     Name: Name.value,
     Mail: Mail.value,
-    Message: Message.value
+    Message: Message.value,
   };
-  localStorage.setItem('formData', JSON.stringify(formData));''
+  localStorage.setItem('formData', JSON.stringify(formData));
 }
 
 // retrieve the data
