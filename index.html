@@ -168,10 +168,11 @@
             feature that you need built or a project that needs coding. I’d love
             to help with it
             </p>
-            <form action="https://formspree.io/f/xwkzweoq" method="post" class="forms">
+            <form action="https://formspree.io/f/xwkzweoq" method="post" class="forms" id="form">
                 <fieldset class="form-inputs">
-                    <input type="text" placeholder="Your Name" maxlength="30" required />
-                    <input type="email" placeholder="example@mail.com" required>
+                    <input type="text" id="name" placeholder="Your Name" maxlength="30" required />
+                    <input type="email" id="email" placeholder="example@mail.com" required>
+                    <div class="warn"></div>
                     <textarea name="message" placeholder="write your message here" maxlength="500" required></textarea>
                     <button type="submit" class="submit-btn">Get In Touch</button>
                 </fieldset>
