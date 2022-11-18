@@ -239,12 +239,12 @@ window.onload = () => {
   dynamicProject();
 };
 // form validation
-const Email  = document.getElementById('email');
+const Email = document.getElementById('email');
 const form = document.getElementById('form');
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-  
+
   validation();
 });
 
@@ -268,15 +268,14 @@ const successMessage = element => {
   formInput.classList.remove('warn')
 }
 
-
 const validation = () => {
   const email = Email.value.trim();
-// check if email is lowercase
-  if (email !== email.toLowerCase()){
-    errMessage(Email, 'Email should be in lower case')
-  }
+  // check if email is lowercase
+  if (email !== email.toLowerCase()) {
+    errMessage(Email, 'Email should be in lower case');
+   }
   else {
     successMessage(Email);
     form.submit();
-  } 
+  }
 };
