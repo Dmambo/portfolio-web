@@ -239,13 +239,31 @@ window.onload = () => {
   dynamicProject();
 };
 
-const save = document.querySelector('.form-button');
-save.addEventListener('click', ()=> {
-   n1= document.getElementById('name1').value;
-   e1= document.getElementById('email').value;
-   m1= document.getElementById('text-area').value;
-  window.localStorage.setItem("name", n1);
-  window.localStorage.setItem("email", e1);
-  window.localStorage.setItem("message", m1);
- 
-});
+const Name = document.getElementById('name');
+const Mail = document.getElementById('email');
+const Message = document.getElementById('message');
+
+function storeData() {
+  const formData = {
+    Name: Name.value,
+    Mail: Mail.value,
+    Message: Message.value
+  };
+  localStorage.setItem('formData', JSON.stringify(formData));''
+}
+
+function retrieveData() {
+  if (!localStorage.getItem('formData')) {
+    storeData();
+  }
+
+  const local = JSON.parse(localStorage.getItem('formData'));
+  Name.setAttribute('value', local.Name);
+  Mail.setAttribute('value', local.Mail);
+  Message.setAttribute('value', local.Message);
+}
+
+retrieveData();
+Name.addEventListener('change', storeData);
+Mail.addEventListener('change', storeData);
+Message.addEventListener('change', storeData);
