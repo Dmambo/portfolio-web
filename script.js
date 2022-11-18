@@ -242,12 +242,6 @@ window.onload = () => {
 const Email = document.getElementById('email');
 const form = document.getElementById('form');
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
-
-  validation();
-});
-
 // send error message
 const errMessage = (element, message) => {
   const formInput = element.parentElement;
@@ -259,7 +253,7 @@ const errMessage = (element, message) => {
 };
 
 //  Remove the error message
-const successMessage = (element => {
+const successMessage = ((element) => {
   const formInput = element.parentElement;
   const errdisplay = formInput.querySelector('.warn');
 
@@ -274,8 +268,15 @@ const validation = () => {
   if (email !== email.toLowerCase()) {
     errMessage(Email, 'Email should be in lower case');
   }
+
   else {
     successMessage(Email);
     form.submit();
   }
 };
+
+form.addEventListener(('submit'), e => {
+  e.preventDefault();
+  
+  validation();
+});
