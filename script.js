@@ -238,11 +238,7 @@ function dynamicProject() {
 window.onload = () => {
   dynamicProject();
 };
-
-<<<<<<< HEAD
-// form validation 
-=======
->>>>>>> 398c114549a40fbb2134ec5a7450ea18158374e1
+// form validation
 const Email  = document.getElementById('email');
 const form = document.getElementById('form');
 
@@ -252,6 +248,7 @@ form.addEventListener('submit', e => {
   validation();
 });
 
+// send error message
 const errMessage = (element, message) => {
   const formInput = element.parentElement;
   const errdisplay = formInput.querySelector('.warn');
@@ -261,6 +258,7 @@ const errMessage = (element, message) => {
   formInput.classList.remove('success')
 }
 
+//  Remove the error message
 const successMessage = element => {
   const formInput = element.parentElement;
   const errdisplay = formInput.querySelector('.warn');
@@ -273,20 +271,12 @@ const successMessage = element => {
 
 const validation = () => {
   const email = Email.value.trim();
-<<<<<<< HEAD
-//  check if email is lowercase
-=======
-
->>>>>>> 398c114549a40fbb2134ec5a7450ea18158374e1
+// check if email is lowercase
   if (email !== email.toLowerCase()){
     errMessage(Email, 'Email should be in lower case')
   }
   else {
-<<<<<<< HEAD
     successMessage(Email);
     form.submit();
-=======
-    successMessage(Email)
->>>>>>> 398c114549a40fbb2134ec5a7450ea18158374e1
   } 
 };
