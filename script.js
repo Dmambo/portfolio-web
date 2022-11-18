@@ -239,10 +239,12 @@ window.onload = () => {
   dynamicProject();
 };
 
+// collect data
 const Name = document.getElementById('name');
 const Mail = document.getElementById('email');
 const Message = document.getElementById('message');
 
+// store the data
 function storeData() {
   const formData = {
     Name: Name.value,
@@ -252,6 +254,7 @@ function storeData() {
   localStorage.setItem('formData', JSON.stringify(formData));''
 }
 
+// retrieve the data
 function retrievedData() {
   if (!localStorage.getItem('formData')) {
     storeData();
@@ -263,6 +266,7 @@ function retrievedData() {
   Message.setAttribute('value', local.Message);
 }
 
+// change the data
 retrievedData();
 Name.addEventListener('change', storeData);
 Mail.addEventListener('change', storeData);
