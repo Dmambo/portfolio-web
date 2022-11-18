@@ -297,7 +297,7 @@ function storeData() {
 }
 
 // retrieve the data
-function retrievedData() {
+function retrieveData() {
   if (!localStorage.getItem('formData')) {
     storeData();
   }
@@ -309,7 +309,7 @@ function retrievedData() {
 }
 
 // change the data
-retrievedData();
+retrieveData();
 Name.addEventListener('change', storeData);
 Mail.addEventListener('change', storeData);
 Message.addEventListener('change', storeData);
