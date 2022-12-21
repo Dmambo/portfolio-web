@@ -23,38 +23,38 @@ function iDiv(f = 'div') {
 const myProjectData = [
   {
     id: 'port1',
-    title: 'Tonic',
+    title: 'Todo ',
     framework: ['CANOPY', 'Back End Dev', 2015],
     text: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     tags: ['HTML', 'CSS', 'Javascript'],
-    img: './images/snapshoot-portfolio1.png',
+    img: './images/TODO.JPG',
     Details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    liveLink: 'https://dmambo.github.io/',
-    sourceLink: '#',
+    liveLink: 'https://dmambo.github.io/todo/dist/',
+    sourceLink: 'https://github.com/Dmambo/todo',
   },
 
   {
     id: 'port2',
-    title: 'Multi-Post Stories',
+    title: 'AwesomeBooks',
     framework: ['CANOPY', 'Back End Dev', 2015],
     text: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     tags: ['HTML', 'CSS', 'Javascript'],
-    img: './images/snapshoot-portfolio2.png',
+    img: './images/awesomebooks.JPG',
     Details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    liveLink: 'https://dmambo.github.io/',
-    sourceLink: '#',
+    liveLink: 'https://dmambo.github.io/Awesome-bookes6/',
+    sourceLink: 'https://github.com/Dmambo/Awesome-bookes6',
   },
 
   {
     id: 'port3',
-    title: 'Tonic',
+    title: 'Capstone',
     framework: ['CANOPY', 'Back End Dev', 2015],
     text: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     tags: ['HTML', 'CSS', 'Javascript'],
-    img: './images/snapshoot-portfolio3.png',
+    img: './images/capstone.JPG',
     Details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    liveLink: 'https://dmambo.github.io/',
-    sourceLink: '#',
+    liveLink: 'https://dmambo.github.io/capstone/',
+    sourceLink: 'https://github.com/Dmambo/capstone',
   },
 
   {
@@ -238,44 +238,3 @@ function dynamicProject() {
 window.onload = () => {
   dynamicProject();
 };
-// form validation
-const Email = document.getElementById('email');
-const form = document.getElementById('form');
-
-// send error message
-const errMessage = (element, message) => {
-  const formInput = element.parentElement;
-  const errdisplay = formInput.querySelector('.warn');
-
-  errdisplay.innerText = message;
-  formInput.classList.add('warn');
-  formInput.classList.remove('success');
-};
-
-//  Remove the error message
-const successMessage = ((element) => {
-  const formInput = element.parentElement;
-  const errdisplay = formInput.querySelector('.warn');
-
-  errdisplay.innerText = '';
-  formInput.classList.add('success');
-  formInput.classList.remove('warn');
-});
-
-const validation = () => {
-  const email = Email.value.trim();
-  // check if email is lowercase
-  if (email !== email.toLowerCase()) {
-    errMessage(Email, 'Email should be in lower case');
-  } else {
-    successMessage(Email);
-    form.submit();
-  }
-};
-
-function onsubmit(e) {
-  e.preventDefault();
-
-  validation();
-}
-form.addEventListener('submit', onsubmit);
