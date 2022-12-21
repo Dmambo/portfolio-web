@@ -237,4 +237,82 @@ function dynamicProject() {
 // display on screen
 window.onload = () => {
   dynamicProject();
+
 };
+
+};
+// form validation
+const Email = document.getElementById('email');
+const form = document.getElementById('form');
+
+// send error message
+const errMessage = (element, message) => {
+  const formInput = element.parentElement;
+  const errdisplay = formInput.querySelector('.warn');
+
+  errdisplay.innerText = message;
+  formInput.classList.add('warn');
+  formInput.classList.remove('success');
+};
+
+//  Remove the error message
+const successMessage = ((element) => {
+  const formInput = element.parentElement;
+  const errdisplay = formInput.querySelector('.warn');
+
+  errdisplay.innerText = '';
+  formInput.classList.add('success');
+  formInput.classList.remove('warn');
+});
+
+const validation = () => {
+  const email = Email.value.trim();
+  // check if email is lowercase
+  if (email !== email.toLowerCase()) {
+    errMessage(Email, 'Email should be in lower case');
+  } else {
+    successMessage(Email);
+    form.submit();
+  }
+};
+
+function onsubmit(e) {
+  e.preventDefault();
+
+  validation();
+}
+form.addEventListener('submit', onsubmit);
+
+// collect data
+const Name = document.getElementById('name');
+const Mail = document.getElementById('email');
+const Message = document.getElementById('message');
+
+// store the data
+function storeData() {
+  const formData = {
+    Name: Name.value,
+    Mail: Mail.value,
+    Message: Message.value,
+  };
+  localStorage.setItem('formData', JSON.stringify(formData));
+}
+
+// retrieve the data
+function retrieveData() {
+  if (!localStorage.getItem('formData')) {
+    storeData();
+  }
+
+  const local = JSON.parse(localStorage.getItem('formData'));
+  Name.setAttribute('value', local.Name);
+  Mail.setAttribute('value', local.Mail);
+  Message.setAttribute('value', local.Message);
+}
+
+// change the data
+retrieveData();
+Name.addEventListener('change', storeData);
+Mail.addEventListener('change', storeData);
+Message.addEventListener('change', storeData);
+
